@@ -1,7 +1,15 @@
 # Lenon Barber — Hub premium (link da bio)
 
+![Home do hub](docs/home.jpg)
+
 Hub mobile-first que substitui o Linktree/Bio.site tradicional por uma experiência de
 agendamento e apresentação profissional para o barbeiro Lenon.
+
+🔗 **Deploy:** [lenonbarber.vercel.app](https://lenonbarber.vercel.app)
+
+| Sobre | Serviços | Contato |
+|---|---|---|
+| ![Sobre](docs/sobre.jpg) | ![Serviços](docs/servicos.jpg) | ![Contato](docs/contato.jpg) |
 
 ## 1. Arquitetura da informação (sitemap)
 
