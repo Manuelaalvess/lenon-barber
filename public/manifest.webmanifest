@@ -1,0 +1,12 @@
+{
+  "name": "Lenon Barber",
+  "short_name": "Lenon Barber",
+  "description": "Agende seu horário com Lenon Barber",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#12130d",
+  "theme_color": "#12130d",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
