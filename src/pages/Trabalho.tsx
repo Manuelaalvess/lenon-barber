@@ -8,7 +8,7 @@ import Gallery from "../components/Gallery";
 import TestimonialCard from "../components/TestimonialCard";
 import FaqAccordion from "../components/FaqAccordion";
 import { profile, services, testimonials, faqs } from "../data/profile";
-import lenonAtendimento from "../assets/gallery/g4-atendimento.jpg";
+import lenonAtendimento from "../assets/gallery/g4-atendimento.webp";
 
 function SectionTitle({ children }: { children: string }) {
   return <h2 className="mb-3 font-display text-lg font-medium text-cream">{children}</h2>;

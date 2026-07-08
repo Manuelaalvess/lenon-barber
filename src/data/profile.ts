@@ -27,9 +27,8 @@ export const profile: BarberProfile = {
   address: "Rua Portugal, 19 - Centro, Nova Friburgo - RJ, 28610-135",
   mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJfaGbeTuLlwARSflMFPRlEs8",
   hours: [
-    { day: "Terça a sexta", time: "09:00 – 19:00" },
-    { day: "Sábado", time: "09:00 – 17:00" },
-    { day: "Domingo e segunda", time: "Fechado" },
+    { day: "Segunda a sábado", time: "08:00 – 20:00" },
+    { day: "Domingo", time: "Fechado" },
   ],
 };
 
@@ -41,6 +40,9 @@ export const services: Service[] = [
   { id: "pigmentacao", name: "Pigmentação", description: "Correção de falhas e uniformização da barba.", duration: "40 min", icon: "droplet" },
   { id: "corte-infantil", name: "Corte infantil", description: "Atendimento paciente, pensado para crianças.", duration: "30 min", icon: "child" },
   { id: "acabamento", name: "Acabamento", description: "Contorno e navalha entre um corte e outro.", duration: "15 min", icon: "sparkles" },
+  { id: "colorimetria", name: "Colorimetria", description: "Coloração e correção de tom no cabelo ou na barba.", duration: "20 min", icon: "palette" },
+  { id: "depilacao", name: "Depilação de narina e orelhas", description: "Remoção rápida e higiênica dos pelos da orelha e do nariz.", duration: "10 min", icon: "ear" },
+  { id: "barbaterapia", name: "Barbaterapia", description: "Ritual de relaxamento e cuidado para couro cabeludo e barba.", duration: "30 min", icon: "waves" },
 ];
 
 export const testimonials: Testimonial[] = [

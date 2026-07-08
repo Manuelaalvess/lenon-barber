@@ -22,6 +22,7 @@ export default function Contato() {
           <PrimaryButton href={profile.whatsappUrl} icon={MessageCircle}>
             Chamar no WhatsApp
           </PrimaryButton>
+          <p className="-mt-1.5 text-center text-[12px] text-sage-dim">{profile.whatsappDisplay}</p>
           <SecondaryButton href={profile.instagramUrl} icon={AtSign}>
             Seguir no Instagram
           </SecondaryButton>

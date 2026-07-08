@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lenon-barber.vercel.app/sitemap.xml
+Sitemap: https://lenonbarber.vercel.app/sitemap.xml

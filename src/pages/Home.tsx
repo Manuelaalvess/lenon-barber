@@ -5,7 +5,7 @@ import ExternalHubCard from "../components/ExternalHubCard";
 import Reveal from "../components/Reveal";
 import QuickNav from "../components/QuickNav";
 import { profile } from "../data/profile";
-import lenonPhoto from "../assets/lenon-photo.jpg";
+import lenonPhoto from "../assets/lenon-photo.webp";
 
 export default function Home() {
   const handleShare = async () => {

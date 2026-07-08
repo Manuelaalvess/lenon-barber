@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
-import g1 from "../assets/gallery/g1-mullet.jpg";
-import g2 from "../assets/gallery/g2-curly.jpg";
-import g3 from "../assets/gallery/g3-design.jpg";
-import g5 from "../assets/gallery/g5-wavy.jpg";
-import g6 from "../assets/gallery/g6-extra.jpg";
-import g7 from "../assets/gallery/g7-extra.jpg";
-import g8 from "../assets/gallery/g8-extra.jpg";
-import g9 from "../assets/gallery/g9-extra.jpg";
+import g1 from "../assets/gallery/g1-mullet.webp";
+import g2 from "../assets/gallery/g2-curly.webp";
+import g3 from "../assets/gallery/g3-design.webp";
+import g5 from "../assets/gallery/g5-wavy.webp";
+import g6 from "../assets/gallery/g6-extra.webp";
+import g7 from "../assets/gallery/g7-extra.webp";
+import g8 from "../assets/gallery/g8-extra.webp";
+import g9 from "../assets/gallery/g9-extra.webp";
 
 interface GalleryImage {
   id: string;

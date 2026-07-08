@@ -1,15 +1,13 @@
 # Lenon Barber — Hub premium (link da bio)
 
-![Home do hub](docs/home.jpg)
-
 Hub mobile-first que substitui o Linktree/Bio.site tradicional por uma experiência de
 agendamento e apresentação profissional para o barbeiro Lenon.
 
 🔗 **Deploy:** [lenonbarber.vercel.app](https://lenonbarber.vercel.app)
 
-| Sobre | Serviços | Contato |
-|---|---|---|
-| ![Sobre](docs/sobre.jpg) | ![Serviços](docs/servicos.jpg) | ![Contato](docs/contato.jpg) |
+| Home | Sobre | Serviços | Contato |
+|---|---|---|---|
+| ![Home](docs/home.jpg) | ![Sobre](docs/sobre.jpg) | ![Serviços](docs/servicos.jpg) | ![Contato](docs/contato.jpg) |
 
 ## 1. Arquitetura da informação (sitemap)
 
@@ -120,13 +118,18 @@ preencha antes do deploy:
    `src/assets/gallery/`, com lightbox em tela cheia. A foto de atendimento
    (Lenon cortando o cabelo de um cliente) ficou reservada para o topo da seção
    "Sobre mim", como pedido.
-5. **Avaliações** (`src/data/profile.ts`) — os três depoimentos são exemplos de
-   formato/tom, não depoimentos reais. Troque pelos comentários reais de clientes
-   (com autorização deles).
+5. **Avaliações** (`src/data/profile.ts`) — os três depoimentos ainda são
+   exemplos de formato/tom, não depoimentos reais — em discussão com a cliente
+   se serão substituídos por prints reais de WhatsApp. ~~Formas de pagamento~~
+   confirmadas pelo cliente como estão (Pix, débito, crédito) — sem alteração.
 6. ~~Bio do "Sobre mim"~~ — texto final aprovado pelo cliente já aplicado.
 7. **Testar o link de agendamento**: não consegui abrir a página programaticamente
    (bloqueio de bot no site do AppBarber) — teste manualmente do celular antes de
    divulgar o link.
+8. ~~Horário de atendimento e serviços~~ — confirmados pelo cliente e aplicados:
+   segunda a sábado, 08:00–20:00, domingo fechado. Serviços novos adicionados:
+   Colorimetria (20 min), Depilação de narina e orelhas (10 min), Barbaterapia
+   (30 min) — durações já confirmadas e aplicadas.
 
 ## 7. Roadmap (o que ficou fora do V1, de propósito)
 

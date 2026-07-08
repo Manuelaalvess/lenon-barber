@@ -1,14 +1,17 @@
-import { Scissors, Sparkles, Droplet, Shirt, Baby } from "lucide-react";
+import { Scissors, Wind, Droplet, Shirt, Baby, Sparkles, Ear, Palette, Waves } from "lucide-react";
 import type { Service } from "../types";
 
 const ICONS: Record<string, typeof Scissors> = {
   scissors: Scissors,
-  razor: Sparkles,
+  razor: Wind,
   shirt: Shirt,
   beard: Scissors,
   droplet: Droplet,
   child: Baby,
   sparkles: Sparkles,
+  ear: Ear,
+  palette: Palette,
+  waves: Waves,
 };
 
 export default function ServiceCard({ service }: { service: Service }) {

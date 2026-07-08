@@ -22,13 +22,6 @@ export interface FaqItem {
   actionHref?: string;
 }
 
-export interface GalleryImage {
-  id: string;
-  src: string;
-  alt: string;
-  category: "cortes" | "barba" | "antes-depois" | "ambiente";
-}
-
 export interface BarberProfile {
   name: string;
   brand: string;
