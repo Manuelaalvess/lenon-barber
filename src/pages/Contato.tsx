@@ -23,7 +23,7 @@ export default function Contato() {
             Chamar no WhatsApp
           </PrimaryButton>
           <SecondaryButton href={profile.instagramUrl} icon={AtSign}>
-            Seguir no AtSign
+            Seguir no Instagram
           </SecondaryButton>
         </Reveal>
 

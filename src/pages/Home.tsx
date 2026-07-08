@@ -57,7 +57,7 @@ export default function Home() {
             href={profile.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="AtSign"
+            aria-label="Instagram"
             className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-sage transition-colors hover:border-brass hover:text-brass"
           >
             <AtSign size={16} aria-hidden="true" />
@@ -99,7 +99,7 @@ export default function Home() {
           />
         </Reveal>
         <Reveal delay={0.15}>
-          <HubCard to="/contato" icon={MessageCircle} title="Fale comigo" subtitle="WhatsApp, AtSign e localização" />
+          <HubCard to="/contato" icon={MessageCircle} title="Fale comigo" subtitle="WhatsApp, Instagram e localização" />
         </Reveal>
       </div>
 
