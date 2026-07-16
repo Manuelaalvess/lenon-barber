@@ -8,7 +8,12 @@ interface ExternalHubCardProps {
   subtitle: string;
 }
 
-export default function ExternalHubCard({ href, icon: Icon, title, subtitle }: ExternalHubCardProps) {
+export default function ExternalHubCard({
+  href,
+  icon: Icon,
+  title,
+  subtitle,
+}: ExternalHubCardProps) {
   return (
     <motion.div whileTap={{ scale: 0.98 }}>
       <a

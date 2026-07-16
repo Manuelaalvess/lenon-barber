@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import Trabalho from "./pages/Trabalho";
@@ -6,7 +6,7 @@ import Contato from "./pages/Contato";
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="min-h-svh bg-ink">
         <AnimatePresence mode="wait">
           <Routes>
@@ -16,6 +16,6 @@ export default function App() {
           </Routes>
         </AnimatePresence>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }

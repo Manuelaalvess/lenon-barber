@@ -19,7 +19,9 @@ export default function PageHeader({ title, eyebrow }: PageHeaderProps) {
           <ChevronLeft size={18} aria-hidden="true" />
         </Link>
         <div>
-          {eyebrow && <p className="text-[11px] uppercase tracking-[0.12em] text-sage-dim">{eyebrow}</p>}
+          {eyebrow && (
+            <p className="text-[11px] uppercase tracking-[0.12em] text-sage-dim">{eyebrow}</p>
+          )}
           <h1 className="font-display text-lg font-medium text-cream">{title}</h1>
         </div>
       </div>

@@ -41,7 +41,12 @@ export default function Gallery() {
             className="aspect-square overflow-hidden rounded-xl border border-line"
             aria-label={`Ver imagem em tamanho maior: ${img.alt}`}
           >
-            <img src={img.src} alt={img.alt} className="h-full w-full object-cover" loading="lazy" />
+            <img
+              src={img.src}
+              alt={img.alt}
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
           </button>
         ))}
       </div>

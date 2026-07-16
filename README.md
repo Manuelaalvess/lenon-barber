@@ -5,8 +5,8 @@ agendamento e apresentação profissional para o barbeiro Lenon.
 
 🔗 **Deploy:** [lenonbarber.vercel.app](https://lenonbarber.vercel.app)
 
-| Home | Sobre | Serviços | Contato |
-|---|---|---|---|
+| Home                   | Sobre                    | Serviços                       | Contato                      |
+| ---------------------- | ------------------------ | ------------------------------ | ---------------------------- |
 | ![Home](docs/home.jpg) | ![Sobre](docs/sobre.jpg) | ![Serviços](docs/servicos.jpg) | ![Contato](docs/contato.jpg) |
 
 ## 1. Arquitetura da informação (sitemap)
@@ -41,14 +41,14 @@ um clique para retornar ao hub. Nenhuma tela é um beco sem saída.
 
 ## 3. Design system
 
-| Token | Valor | Uso |
-|---|---|---|
-| `--color-ink` | `#12130d` | Fundo base |
-| `--color-panel-2` | `#23261b` | Cards |
-| `--color-line` | `#34372a` | Bordas |
-| `--color-cream` | `#f3efe2` | Texto principal |
-| `--color-sage` | `#a2a68f` | Texto secundário |
-| `--color-brass` | `#c9a24d` | Acento (CTA principal, destaques) |
+| Token             | Valor     | Uso                               |
+| ----------------- | --------- | --------------------------------- |
+| `--color-ink`     | `#12130d` | Fundo base                        |
+| `--color-panel-2` | `#23261b` | Cards                             |
+| `--color-line`    | `#34372a` | Bordas                            |
+| `--color-cream`   | `#f3efe2` | Texto principal                   |
+| `--color-sage`    | `#a2a68f` | Texto secundário                  |
+| `--color-brass`   | `#c9a24d` | Acento (CTA principal, destaques) |
 
 - **Tipografia**: `Fraunces` (serifada, com personalidade) para títulos e citações;
   `Inter` para corpo e UI. Contraste clássico/atemporal em vez de uma sans genérica
@@ -65,15 +65,16 @@ um clique para retornar ao hub. Nenhuma tela é um beco sem saída.
   da Home e de todas as páginas secundárias. Abre um dropdown com atalho direto
   para "Sobre mim", "Serviços" e "Dúvidas frequentes" dentro de `/trabalho`, com
   scroll suave até a seção. Implementado com `navigate(..., { state })` em vez de
-  âncora nativa (`#sobre`) porque o app usa `HashRouter` — um `#sobre` nativo
-  colidiria com o hash de rota (`#/trabalho`). Ver `src/components/QuickNav.tsx`.
+  âncora nativa (`#sobre`), pois a seção pode estar em outra rota — a âncora só
+  funcionaria depois que `/trabalho` já estivesse montada. Ver
+  `src/components/QuickNav.tsx`.
 
 ## 4. Estrutura de pastas
 
 ```
 src/
   components/   # Blocos reutilizáveis (HubCard, Buttons, ServiceCard, Gallery, ...)
-  pages/        # Home, Agendar, Trabalho, Contato — uma por rota
+  pages/        # Home, Trabalho, Contato — uma por rota ("Agendar" é link direto, não rota própria)
   data/         # profile.ts: todo o conteúdo (textos, serviços, depoimentos, FAQ)
   types/        # Interfaces TypeScript do modelo de conteúdo
 ```
@@ -89,10 +90,9 @@ lock quando a galeria crescer).
   justificar em entrevista.
 - **Tailwind CSS v4**: tokens de design (`@theme`) direto no CSS, sem arquivo de
   config separado — reduz a superfície de configuração do projeto.
-- **React Router (`HashRouter`)**: usei `HashRouter` em vez de `BrowserRouter`
-  porque não sei ainda onde isso vai ser hospedado. Se o destino final for Vercel,
-  Netlify ou qualquer host com rewrite configurável, troque para `BrowserRouter`
-  (uma linha em `App.tsx`) e ganha URLs limpas (`/agendar` em vez de `/#/agendar`).
+- **React Router (`BrowserRouter`)**: URLs limpas (`/trabalho`, não `/#/trabalho`),
+  o que permite ao Google indexar cada rota separadamente. Exige rewrite no host
+  para servir `index.html` em qualquer caminho — configurado em `vercel.json`.
 - **Framer Motion**: só para as transições de entrada. Nada de biblioteca de
   animação para um efeito que dá pra fazer com `transition-transform` do Tailwind
   — usei onde realmente agregou (scroll reveal, tap no card).
@@ -111,21 +111,25 @@ preencha antes do deploy:
    `@lenon_thebarber`, link do sistema da Willian Castro Barber Shop sem o
    parâmetro de rastreamento do Facebook).
 2. ~~Foto do barbeiro~~ — já usada no Hero da Home e no topo de "Sobre mim"
-   (`src/assets/lenon-photo.jpg`, redimensionada e comprimida para ~67 KB).
+   (`src/assets/lenon-photo.webp`, redimensionada e comprimida).
 3. ~~Endereço e mapa~~ — preenchidos e confirmados: Rua Portugal, 19 - Centro,
    Nova Friburgo - RJ, na Willian Castro Barber Shop (nome confirmado pelo cliente).
 4. ~~Galeria~~ — 7 fotos reais do trabalho do Lenon já aplicadas em
    `src/assets/gallery/`, com lightbox em tela cheia. A foto de atendimento
    (Lenon cortando o cabelo de um cliente) ficou reservada para o topo da seção
    "Sobre mim", como pedido.
-5. **Avaliações** (`src/data/profile.ts`) — os três depoimentos ainda são
-   exemplos de formato/tom, não depoimentos reais — em discussão com a cliente
-   se serão substituídos por prints reais de WhatsApp. ~~Formas de pagamento~~
+5. **Avaliações** (`src/data/profile.ts`) — **mostruário**: os três depoimentos
+   são fictícios, usados só para preencher o layout. Até o momento a cliente não
+   enviou os prints reais das avaliações de clientes do Lenon; assim que
+   enviar, substituo pelos depoimentos reais. ~~Formas de pagamento~~
    confirmadas pelo cliente como estão (Pix, débito, crédito) — sem alteração.
 6. ~~Bio do "Sobre mim"~~ — texto final aprovado pelo cliente já aplicado.
-7. **Testar o link de agendamento**: não consegui abrir a página programaticamente
-   (bloqueio de bot no site do AppBarber) — teste manualmente do celular antes de
-   divulgar o link.
+7. ~~Testar o link de agendamento~~ — testado, abre normalmente e mostra os
+   serviços, horário e endereço reais da Willian Castro Barber Shop. **Achado
+   durante o teste, não corrigido**: o telefone exibido lá é `(22) 99901-5487`,
+   diferente do WhatsApp em `profile.ts` (`(22) 99993-1788`) — confirme com o
+   cliente se são números diferentes de propósito (linha da barbearia vs.
+   WhatsApp pessoal do Lenon) antes de considerar isso um erro.
 8. ~~Horário de atendimento e serviços~~ — confirmados pelo cliente e aplicados:
    segunda a sábado, 08:00–20:00, domingo fechado. Serviços novos adicionados:
    Colorimetria (20 min), Depilação de narina e orelhas (10 min), Barbaterapia
@@ -133,8 +137,8 @@ preencha antes do deploy:
 
 ## 7. Roadmap (o que ficou fora do V1, de propósito)
 
-- PWA completo ("adicionar à tela inicial" com service worker) — vale a pena depois
-  que o conteúdo real estiver validado, não antes.
+- ~~PWA completo~~ — feito: `public/sw.js` cacheia o app shell (network-first,
+  com fallback pro cache offline) e é registrado em `main.tsx` só em produção.
 - Compartilhar perfil já está implementado (usa navigator.share com fallback para
   copiar link).
 - Copiar endereço já implementado; WhatsApp pode ganhar o mesmo padrão se quiser.

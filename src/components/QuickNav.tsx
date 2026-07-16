@@ -11,8 +11,9 @@ const SECTIONS = [
 
 /**
  * Menu de 3 traços que leva direto para uma seção de /trabalho.
- * Usa navigate + state em vez de âncora nativa (#id) porque o app roda em
- * HashRouter — um "#sobre" nativo colidiria com o hash de rota (#/trabalho).
+ * Usa navigate + state em vez de âncora nativa (#id) porque a seção pode estar
+ * em outra rota (ex.: clicar em "Sobre mim" a partir da Home) — a âncora só
+ * funciona depois que /trabalho já estiver montada.
  */
 export default function QuickNav() {
   const [open, setOpen] = useState(false);

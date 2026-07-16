@@ -50,7 +50,9 @@ export default function Home() {
         <p className="mt-4 text-[13px] text-sage">
           {profile.specialty} · {profile.city}
         </p>
-        <p className="mt-2 max-w-[26ch] text-[13px] leading-relaxed text-sage-dim">{profile.tagline}</p>
+        <p className="mt-2 max-w-[26ch] text-[13px] leading-relaxed text-sage-dim">
+          {profile.tagline}
+        </p>
 
         <div className="mt-5 flex items-center gap-2.5">
           <a
@@ -99,7 +101,12 @@ export default function Home() {
           />
         </Reveal>
         <Reveal delay={0.15}>
-          <HubCard to="/contato" icon={MessageCircle} title="Fale comigo" subtitle="WhatsApp, Instagram e localização" />
+          <HubCard
+            to="/contato"
+            icon={MessageCircle}
+            title="Fale comigo"
+            subtitle="WhatsApp, Instagram e localização"
+          />
         </Reveal>
       </div>
 
